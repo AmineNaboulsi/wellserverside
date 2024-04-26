@@ -2,6 +2,11 @@ const express = require("express");
 const app = express();
 const mysql = require('mysql');
 const userRouter = require("./Router/userRouter");
+const wellRouter = require("./Router/wellRouter");
+const taskRouter = require("./Router/taskRouter");
+const paymentRouter = require("./Router/paymentRouter");
+const clientRouter = require("./Router/clientRouter");
+
 require('dotenv').config();
 
 app.use(express.json());
@@ -33,6 +38,10 @@ con.on('error', function(err) {
 });
 
 app.use("/users", userRouter);
+app.use("/wells", wellRouter);
+app.use("/tasks", taskRouter);
+app.use("/payments", paymentRouter);
+app.use("/clients", clientRouter);
 
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
