@@ -9,7 +9,7 @@ app.use(express.json());
 global.con = mysql.createConnection({
   host: process.env._HOST,
   user: process.env._USER,
-  password: process.env._password,
+  password: process.env._PASSWORD,
   database: process.env._DB
 });
 
