@@ -23,8 +23,8 @@ app.use("/users", userRouter);
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
     console.log("Environment Variables:");
-  console.log("HOST:", process.env.HOST);
-console.log("USER:", process.env.USER);
+  console.log("HOST:", process.env._HOST);
+console.log("USER:", process.env._USER);
 console.log("PASSWORD:", '[HIDDEN]'); // Do not print passwords
-console.log("DB:", process.env.DB);
+console.log("DB:", process.env._DB);
 });
